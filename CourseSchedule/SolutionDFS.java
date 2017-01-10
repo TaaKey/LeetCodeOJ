@@ -7,16 +7,16 @@ import java.util.ArrayList;
  */
 public class SolutionDFS {
     public boolean canFinish(int numCourses, int[][] prerequisites) {
-        ArrayList[] graph = new ArrayList[numCourses];
+        ArrayList[] preCourses = new ArrayList[numCourses];
         for (int i = 0; i < numCourses; i++) {
-            graph[i] = new ArrayList();
+            preCourses[i] = new ArrayList();
         }
         boolean[] visited = new boolean[numCourses];
         for (int i = 0; i < prerequisites.length; i++) {
-            graph[prerequisites[i][1]].add(prerequisites[i][0]);
+            preCourses[prerequisites[i][0]].add(prerequisites[i][1]);
         }
         for (int i = 0; i < numCourses; i++) {
-            if (!dfs(graph, visited, i)) {
+            if (!dfs(preCourses, visited, i)) {
                 return false;
             }
         }
