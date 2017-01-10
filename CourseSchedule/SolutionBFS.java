@@ -7,7 +7,7 @@ import java.util.Queue;
 /**
  * Created by whong53 on 1/10/17.
  */
-public class Solution {
+public class SolutionBFS {
     public boolean canFinish(int numCourses, int[][] prerequisites) {
         ArrayList[] preCourses = new ArrayList[numCourses];
         int[] degrees = new int[numCourses];
