@@ -10,7 +10,13 @@ public class Solution {
         return quickSelect(nums, 0, nums.length - 1, nums.length - k);
     }
 
-    // find the k-th smallest element
+    /**
+     * @param nums input array
+     * @param start expected start point of the array
+     * @param end expected end point of the array
+     * @param k k-th smallest element
+     * @return the k-th smallest element in array
+     */
     int quickSelect(int[] nums, int start, int end, int k) {
         int pivot = nums[end];
         int left = start;
