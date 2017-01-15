@@ -1,0 +1,27 @@
+package ReverseString;
+
+/**
+ * Created by Wentao on 1/15/2017.
+ */
+public class Solution {
+    public String reverseString(String s) {
+        if (s == null || s.isEmpty()) {
+            return "";
+        }
+        int left = 0;
+        int right = s.length() - 1;
+        char[] charArray = s.toCharArray();
+        while (left < right) {
+            swap(charArray, left, right);
+            left++;
+            right--;
+        }
+        return String.valueOf(charArray);
+    }
+
+    private void swap(char[] chars, int i1, int i2) {
+        char tmp = chars[i1];
+        chars[i1] = chars[i2];
+        chars[i2] = tmp;
+    }
+}
