@@ -42,7 +42,7 @@ public class Solution {
                         result.add(Arrays.asList(map.get(reversedCut), i));
                     }
                 }
-                if (isPalindrome(currentStr.substring(cut)))  {
+                if (isPalindrome(currentStr.substring(cut))) {
                     String reversedCut = reverseString(currentStr.substring(0, cut));
                     if (map.containsKey(reversedCut) && i != map.get(reversedCut)) {
                         result.add(Arrays.asList(i, map.get(reversedCut)));
@@ -64,7 +64,7 @@ public class Solution {
         return true;
     }
 
-    private String reverseString (String string) {
+    private String reverseString(String string) {
         StringBuilder sb = new StringBuilder(string);
         return sb.reverse().toString();
     }
