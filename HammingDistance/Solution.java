@@ -8,3 +8,13 @@ public class Solution {
         return Integer.bitCount(x ^ y);
     }
 }
+
+class Solution2 {
+    public int hammingDistance(int x, int y) {
+        int xor = x ^ y, count = 0;
+        for (int i = 0; i < 32; i++) {
+            count += (xor >> 1) & 1;
+        }
+        return count;
+    }
+}
