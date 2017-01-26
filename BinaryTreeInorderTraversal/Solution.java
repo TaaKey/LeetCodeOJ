@@ -12,9 +12,6 @@ import java.util.Stack;
 public class Solution {
     public List<Integer> inorderTraversal(TreeNode root) {
         List<Integer> result = new ArrayList<>();
-        if (root == null) {
-            return result;
-        }
         helper(root, result);
         return result;
     }
@@ -32,15 +29,14 @@ class Solution2 {
     public List<Integer> inorderTraversal(TreeNode root) {
         List<Integer> result = new ArrayList<>();
         Stack<TreeNode> stack = new Stack<>();
-        TreeNode cur = root;
-        while (cur != null || !stack.isEmpty()) {
-            while (cur != null) {
-                stack.add(cur);
-                cur = cur.left;
+        while (root != null || !stack.isEmpty()) {
+            while (root != null) {
+                stack.add(root);
+                root = root.left;
             }
-            cur = stack.pop();
-            result.add(cur.val);
-            cur = cur.right;
+            root = stack.pop();
+            result.add(root.val);
+            root = root.right;
         }
         return result;
     }
