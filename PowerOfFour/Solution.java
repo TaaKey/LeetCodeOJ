@@ -1,8 +1,5 @@
 package PowerOfFour;
 
-import java.nio.ByteBuffer;
-import java.util.Arrays;
-
 /**
  * Created by Wentao on 1/26/2017.
  */
