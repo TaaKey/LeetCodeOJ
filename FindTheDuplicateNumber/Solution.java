@@ -20,7 +20,7 @@ public class Solution {
     }
 }
 
-public class Solution2 {
+class Solution2 {
     public int findDuplicate(int[] nums) {
         int slow = 0;
         int fast = 0;
