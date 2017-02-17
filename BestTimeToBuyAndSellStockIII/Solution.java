@@ -43,4 +43,3 @@ class Solution2 {
         return sell2;
     }
 }
-
